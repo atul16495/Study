@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\aspnetcore\\WebApplication\\WebApplication\\WebApplication.csproj",
+      "projectUniqueName": "C:\\Repos\\atul16495\\Study\\WebApplication\\WebApplication.csproj",
       "projectName": "WebApplication",
-      "projectPath": "C:\\aspnetcore\\WebApplication\\WebApplication\\WebApplication.csproj",
+      "projectPath": "C:\\Repos\\atul16495\\Study\\WebApplication\\WebApplication.csproj",
       "packagesPath": "C:\\Users\\Atul\\.nuget\\packages\\",
-      "outputPath": "C:\\aspnetcore\\WebApplication\\WebApplication\\obj\\",
+      "outputPath": "C:\\Repos\\atul16495\\Study\\WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Atul\\AppData\\Roaming\\NuGet\\NuGet.Config",
