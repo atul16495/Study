@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using ModelValidationExamples.CustomValidators;
 using System.ComponentModel.DataAnnotations;
 
 namespace ModelValidationExamples.Models
@@ -8,7 +9,7 @@ namespace ModelValidationExamples.Models
         [Required(ErrorMessage = "{0} is not provided")]
         [Display(Name = "Person Name")]
         [StringLength(40, MinimumLength = 3, ErrorMessage = "{0}should be between {2} and {1} characters long")]
-        [RegularExpression("^[A-Za-z .]$", ErrorMessage ="{0} Should contains only alphabets space and dots(.)")]
+        //[RegularExpression("^[A-Za-z .]$", ErrorMessage ="{0} Should contains only alphabets space and dots(.)")]
         public string? PersonName {  get; set; }
         [Required(ErrorMessage = "{0} can not be blank")]
         [EmailAddress(ErrorMessage = "{0} Should be a proper email address")]
@@ -26,6 +27,9 @@ namespace ModelValidationExamples.Models
         [Range(0,999.99,ErrorMessage = "{0}should be between ${1} and ${2}")]
         public double? Price { get; set; }
 
+        //[MinimumYearValidator(2005, ErrorMessage = "Date of birth should not be newer than {0}")]
+       [MinimumYearValidator(2005)]
+        public DateTime? DateOfBirth { get; set; }
         public override string ToString()
         {
             return $"Person object- Person name: {PersonName}, Email:{Email}, Phone: {Phone}, Password: {Password},Confirm Password: {ConfirmPassword}, Price:{Price}";
