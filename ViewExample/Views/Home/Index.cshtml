@@ -2,8 +2,12 @@
 @using ViewExample.Models
 @{
     string appTitle = "Asp.Net Core Demo App";
-    Person person = new Person() { Name = "Atul", DateOfBirth = null, PersonGender = Gender.Female };
-    //Convert.ToDateTime("2007-07-01") };
+    List<Person> people = new List<Person>()
+    {
+    new Person(){Name="Atul",DateOfBirth=DateTime.Parse("2002-05-06"),PersonGender = Gender.Male},
+    new Person() { Name = "jon", DateOfBirth = DateTime.Parse("2005-09-06"), PersonGender = Gender.Female },
+    new Person(){Name="boss",DateOfBirth=DateTime.Parse("2006-05-20"),PersonGender = Gender.other}
+    };
 }
 <!DOCTYPE <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -12,29 +16,17 @@
     </head>
     <body>
         <h1>Welcome</h1>
-        <h2>Hello @person.Name </h2>
-    @if (person.DateOfBirth.HasValue)
-    {
-        double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25);
-        <h3>@age years old</h3>
-    }
-    else
-    {
-        <h3>Date of Birth is Unknown</h3>
-    }
-    @switch (person.PersonGender)
-    {
-        case Gender.Male:
-            <p>November 19 is International Men's Day</p>
-            ; break;
-        case Gender.Female:
-            <p>March 8 is International Womens Day</p>
-            ; break;
-        case Gender.other:
-            <p>March 31 is International Transgender's Day</p>
-            ;
-            break;
-    }
-
-    </body>
+        @foreach(var person in people)
+        {
+          <div>
+              @person.Name
+              <span>,</span>
+              <span>@person.PersonGender</span>
+              @if (person.DateOfBirth !=null)
+              {
+                <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+              }            
+          </div>
+        }
+</body>
 </html>
