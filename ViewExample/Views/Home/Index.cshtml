@@ -1,32 +1,58 @@
 ﻿
 @using ViewExample.Models
+
 @{
-    string appTitle = "Asp.Net Core Demo App";
-    List<Person> people = new List<Person>()
+    double? GetAge(DateTime? DateOfBirth)
     {
-    new Person(){Name="Atul",DateOfBirth=DateTime.Parse("2002-05-06"),PersonGender = Gender.Male},
-    new Person() { Name = "jon", DateOfBirth = DateTime.Parse("2005-09-06"), PersonGender = Gender.Female },
-    new Person(){Name="boss",DateOfBirth=DateTime.Parse("2006-05-20"),PersonGender = Gender.other}
-    };
-}
-<!DOCTYPE <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-    <title>@appTitle</title>
-        <meta charset="utf-8"/>
-    </head>
-    <body>
-        <h1>Welcome</h1>
-        @foreach(var person in people)
+        if(DateOfBirth is not null)
         {
-          <div>
-              @person.Name
-              <span>,</span>
-              <span>@person.PersonGender</span>
-              @if (person.DateOfBirth !=null)
+            return Math.Round((DateTime.Now-DateOfBirth.Value).TotalDays/365.25);
+        }
+        else
+        {
+            return null;
+        }
+    }
+  //string alertMessage = $"<script>alert('{people.Count} people found')</script>";
+}
+<!DOCTYPE html>
+    <head>
+        <title>@ViewBag.appTitle</title>
+        <meta charset="utf-8"/>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="page-content">
+        <h1>Welcome</h1>
+        @{
+           // List<Person>? people = (List<Person>)ViewData["people"];
+        }
+        @foreach(Person person in ViewBag.people)
+        {
+        
+        <div class="box float-left w-50">
+                <h3>@person.Name</h3>
+            <table class="table w-100">
+                <tbody>
+                    <tr>
+                        <td>Gender</td>
+                        <td> @person.PersonGender</td>
+                    </tr>
+                     <tr>
+                         <td>Date Of Birth</td>
+                         <td> @person.DateOfBirth.Value.ToString("MM/dd/yyyy")</td>
+                      </tr>
+                </tbody>
+            </table>
+        @*  <span>,</span>
+            <span>@person.PersonGender</span> *@
+        @*       @if (person.DateOfBirth !=null)
               {
                 <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
-              }            
+             //   <span>@GetAge(person.DateOfBirth) Years Old</span>
+              }  *@           
           </div>
         }
+    </div>
 </body>
 </html>
