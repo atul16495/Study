@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|c:\\users\\atul\\source\\repos\\middlewareexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|c:\\users\\atul\\source\\repos\\middlewareexample\\custommiddleware\\hellocustommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|solutionrelative:custommiddleware\\hellocustommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|c:\\users\\atul\\source\\repos\\middlewareexample\\custommiddleware\\mycustommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C6E74FB-7895-4F52-BBBC-B3CD0E40D503}|MiddlewareExample.csproj|solutionrelative:custommiddleware\\mycustommiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T16:20:46.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HelloCustomMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\CustomMiddleware\\HelloCustomMiddleware.cs",
+              "RelativeDocumentMoniker": "CustomMiddleware\\HelloCustomMiddleware.cs",
+              "ToolTip": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\CustomMiddleware\\HelloCustomMiddleware.cs",
+              "RelativeToolTip": "CustomMiddleware\\HelloCustomMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAB0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T17:45:22.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mycustommiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\CustomMiddleware\\Mycustommiddleware.cs",
+              "RelativeDocumentMoniker": "CustomMiddleware\\Mycustommiddleware.cs",
+              "ToolTip": "C:\\Users\\Atul\\source\\repos\\MiddlewareExample\\CustomMiddleware\\Mycustommiddleware.cs",
+              "RelativeToolTip": "CustomMiddleware\\Mycustommiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T17:04:53.594Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

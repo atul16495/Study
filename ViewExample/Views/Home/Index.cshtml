@@ -1,0 +1,65 @@
+﻿
+@model IEnumerable<Person>
+
+@{
+    double? GetAge(DateTime? DateOfBirth)
+    {
+        if(DateOfBirth is not null)
+        {
+            return Math.Round((DateTime.Now-DateOfBirth.Value).TotalDays/365.25);
+        }
+        else
+        {
+            return null;
+        }
+    }
+  //string alertMessage = $"<script>alert('{people.Count} people found')</script>";
+}
+<!DOCTYPE html>
+    <head>
+        <title>@ViewBag.appTitle</title>
+        <meta charset="utf-8"/>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+    <body>
+        <div class="page-content">
+        <h1>Persons</h1>
+        @{
+           // List<Person>? people = (List<Person>)ViewData["people"];
+        }
+        @foreach(Person person in Model)
+        {
+        
+        <div class="box float-left w-50">
+                <h3>@person.Name</h3>
+            <table class="table w-100">
+                <tbody>
+                    <tr>
+                        <td>Gender</td>
+                        <td> @person.PersonGender</td>
+                    </tr>
+                     <tr>
+                         <td>Date Of Birth</td>
+                         <td> @person.DateOfBirth.Value.ToString("MM/dd/yyyy")</td>
+                      </tr>
+                </tbody>
+            </table>
+           <div>
+                    <a href="/person-details/@person.Name">Details</a>
+           </div> 
+           
+        @*  <span>,</span>
+            <span>@person.PersonGender</span> *@
+        @*       @if (person.DateOfBirth !=null)
+              {
+                <span>@person.DateOfBirth.Value.ToString("MM/dd/yyyy")</span>
+             //   <span>@GetAge(person.DateOfBirth) Years Old</span>
+              }  *@           
+          </div>
+        }
+        <div>
+            <a href="/perrson-with-product">Person with Product</a>
+        </div>
+    </div>
+</body>
+</html>
