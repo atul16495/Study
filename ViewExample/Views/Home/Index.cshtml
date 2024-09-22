@@ -1,5 +1,5 @@
 ﻿
-@using ViewExample.Models
+@model IEnumerable<Person>
 
 @{
     double? GetAge(DateTime? DateOfBirth)
@@ -23,11 +23,11 @@
 </head>
     <body>
         <div class="page-content">
-        <h1>Welcome</h1>
+        <h1>Persons</h1>
         @{
            // List<Person>? people = (List<Person>)ViewData["people"];
         }
-        @foreach(Person person in ViewBag.people)
+        @foreach(Person person in Model)
         {
         
         <div class="box float-left w-50">
@@ -44,6 +44,10 @@
                       </tr>
                 </tbody>
             </table>
+           <div>
+                    <a href="/person-details/@person.Name">Details</a>
+           </div> 
+           
         @*  <span>,</span>
             <span>@person.PersonGender</span> *@
         @*       @if (person.DateOfBirth !=null)
@@ -53,6 +57,9 @@
               }  *@           
           </div>
         }
+        <div>
+            <a href="/perrson-with-product">Person with Product</a>
+        </div>
     </div>
 </body>
 </html>
