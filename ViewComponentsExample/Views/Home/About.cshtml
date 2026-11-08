@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h1>About</h1>
+<p>
+    A cloud application developer is a software engineer who specializes in creating applications that run on cloud computing platforms like Amazon Web Services (AWS), Microsoft Azure, or Google Cloud Platform (GCP). Here are some key responsibilities and skills of a cloud application developer:
+
+    Responsibilities:
+    Designing and Developing Cloud-Native Applications: Creating applications optimized for cloud environments using technologies like serverless computing, containers, and microservices architecture.
+
+    Integrating Cloud Services: Leveraging cloud services such as storage, databases, compute, and networking to build applications.
+
+    Automating Deployment and Operations: Using tools like AWS CloudFormation or Azure Resource Manager to automate deployment and manage infrastructure.
+
+    Ensuring Security and Compliance: Implementing security best practices and compliance standards to protect applications and data in the cloud.
+
+    Monitoring and Performance Optimization: Using cloud monitoring and logging services to track application performance and scalability.
+</p>
+@{
+    PersonGridModel personGridModel = new PersonGridModel()
+            {
+                GridTitle = "Employee",
+                Persons = new List<Person>()
+             {
+             new Person(){ PersonName = "Dog", JobTitle="PAS"},
+             new Person(){ PersonName = "POD", JobTitle="KAKa"},
+             new Person(){ PersonName = "COD", JobTitle="YUV"}
+             }
+            };
+}
+<vc:grid grid="personGridModel"></vc:grid>
